@@ -22,8 +22,10 @@ namespace cliente
         
         private void butsend_Click(object sender, EventArgs e)
         {
+            //Dirrección
             _server.Connect(txthost.Text, 8080);
-            Byte[] senddata = Encoding.ASCII.GetBytes("Hello Client");
+            //Mensaje ha enviar
+            Byte[] senddata = Encoding.ASCII.GetBytes(txtmessage.Text);
             _server.Send(senddata, senddata.Length);
         }
     }

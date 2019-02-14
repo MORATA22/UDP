@@ -25,6 +25,7 @@ namespace anillo_exterior
         }
         private void UDP_Load(object sender, EventArgs e)
         {
+            //Carga form iniciamos thread en la función serverThread
             Thread thread = new Thread(serverThread);            
             thread.Start();
         }
@@ -32,8 +33,10 @@ namespace anillo_exterior
         public void serverThread()
         {           
             while (true)
-            {                
+            {   
+                //Array que coge los valores recibimos del cliente
                 Byte[] receiveBytes = server.Receive(ref client);
+                //Traducimos array
                 string returnData = Encoding.ASCII.GetString(receiveBytes);
                 mensaje = client.Address.ToString() + ":" + returnData.ToString();
 

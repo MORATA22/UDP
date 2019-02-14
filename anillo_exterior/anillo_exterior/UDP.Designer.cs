@@ -30,19 +30,21 @@
         {
             this.labhost = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labhost
             // 
             this.labhost.AutoSize = true;
-            this.labhost.Location = new System.Drawing.Point(32, 71);
+            this.labhost.Location = new System.Drawing.Point(76, 45);
             this.labhost.Name = "labhost";
             this.labhost.Size = new System.Drawing.Size(0, 13);
             this.labhost.TabIndex = 2;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.labhost);
             this.groupBox1.Location = new System.Drawing.Point(192, 80);
             this.groupBox1.Name = "groupBox1";
@@ -50,6 +52,15 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "UDP";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Mensaje:";
             // 
             // UDP
             // 
@@ -69,6 +80,7 @@
         #endregion
         private System.Windows.Forms.Label labhost;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
