@@ -15,8 +15,9 @@ namespace anillo_exterior
     public partial class UDP : Form
     {       
         UdpClient server = new UdpClient(8080);
-        IPEndPoint client = null;       
-        
+        IPEndPoint client = null;
+        string mensaje = string.Empty;
+
 
         public UDP()
         {
@@ -34,7 +35,16 @@ namespace anillo_exterior
             {                
                 Byte[] receiveBytes = server.Receive(ref client);
                 string returnData = Encoding.ASCII.GetString(receiveBytes);
-                labhost.Text = client.Address.ToString() + ":" + returnData.ToString();               
+                mensaje = client.Address.ToString() + ":" + returnData.ToString();
+
+                if (labhost.InvokeRequired)
+                {
+                    labhost.Invoke((MethodInvoker)delegate { labhost.Text = mensaje; });
+                }
+                else
+                {
+                    labhost.Text = mensaje;
+                }                              
             }
         }        
     }
