@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "anillo_exterior", "anillo_exterior\anillo_exterior.csproj", "{514ED79A-9395-48AD-91A6-8F5BB588BB8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cliente", "cliente\cliente.csproj", "{9C2A253A-33F3-431A-8C8D-4ED7FB6EB799}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{514ED79A-9395-48AD-91A6-8F5BB588BB8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{514ED79A-9395-48AD-91A6-8F5BB588BB8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{514ED79A-9395-48AD-91A6-8F5BB588BB8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C2A253A-33F3-431A-8C8D-4ED7FB6EB799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C2A253A-33F3-431A-8C8D-4ED7FB6EB799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C2A253A-33F3-431A-8C8D-4ED7FB6EB799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C2A253A-33F3-431A-8C8D-4ED7FB6EB799}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

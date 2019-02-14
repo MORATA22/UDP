@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{514ED79A-9395-48AD-91A6-8F5BB588BB8E}</ProjectGuid>
+    <ProjectGuid>{9C2A253A-33F3-431A-8C8D-4ED7FB6EB799}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>anillo_exterior</RootNamespace>
-    <AssemblyName>anillo_exterior</AssemblyName>
+    <RootNamespace>cliente</RootNamespace>
+    <AssemblyName>cliente</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,14 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UDP.cs">
+    <Compile Include="client.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UDP.Designer.cs">
-      <DependentUpon>UDP.cs</DependentUpon>
+    <Compile Include="client.Designer.cs">
+      <DependentUpon>client.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="client.resx">
+      <DependentUpon>client.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,9 +66,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UDP.resx">
-      <DependentUpon>UDP.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
