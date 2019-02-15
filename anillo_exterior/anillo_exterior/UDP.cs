@@ -13,20 +13,24 @@ using System.Threading;
 namespace anillo_exterior
 {
     public partial class UDP : Form
-    {       
-        UdpClient server = new UdpClient(8080);
-        IPEndPoint client = null;
-        string mensaje = string.Empty;
-
-
+    {
         public UDP()
         {
             InitializeComponent();
         }
+
+        #region Instancias
+        UdpClient server = new UdpClient(8080);
+        IPEndPoint client = null;
+        Thread thread;
+        string mensaje = string.Empty;
+        #endregion
+        
+        #region server
         private void UDP_Load(object sender, EventArgs e)
         {
             //Carga form iniciamos thread en la función serverThread
-            Thread thread = new Thread(serverThread);            
+            thread = new Thread(serverThread);            
             thread.Start();
         }
 
@@ -49,6 +53,7 @@ namespace anillo_exterior
                     labhost.Text = mensaje;
                 }                              
             }
-        }        
+        }
+        #endregion
     }
 }
